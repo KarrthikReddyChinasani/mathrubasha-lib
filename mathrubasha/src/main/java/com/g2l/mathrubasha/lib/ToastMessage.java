@@ -4,7 +4,8 @@ import android.content.Context;
 import android.widget.Toast;
 
 public class ToastMessage {
-    public static  void s(Context c,String str) {
-        Toast.makeText(c, str, Toast.LENGTH_LONG).show();
+    public static  void s(Context context,String str, Callback c) {
+        Toast.makeText(context, str, Toast.LENGTH_LONG).show();
+        c.onReceive("Hi people");
     }
 }
